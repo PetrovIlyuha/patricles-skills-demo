@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
+import { Link } from "react-router-dom";
 import {
   Avatar,
   Divider,
@@ -38,10 +38,12 @@ const menuIconsItems = [
   {
     listIcon: <Home />,
     listText: "Home",
+    route: "/",
   },
   {
     listIcon: <AssignmentInd />,
     listText: "CV",
+    route: "/cv",
   },
   {
     listIcon: <Apps />,
@@ -66,7 +68,7 @@ export const SideBar = ({ onClick }) => {
         <Divider />
         <List>
           {menuIconsItems.map((lsItem, key) => (
-            <ListItem button key={key}>
+            <ListItem button key={key} component={Link} to={lsItem.route}>
               <ListItemIcon className={classes.listItem}>
                 {lsItem.listIcon}
               </ListItemIcon>
