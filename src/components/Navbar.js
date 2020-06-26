@@ -1,26 +1,45 @@
 import React, { useState } from "react";
 import MobileRightMenuSlider from "@material-ui/core/Drawer";
+import { NavLink } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
-  ListItem,
   IconButton,
-  ListItemText,
-  Avatar,
-  Divider,
-  List,
   Typography,
   Box,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import ClearAllIcon from "@material-ui/icons/ClearAll";
 import CloseIcon from "@material-ui/icons/Close";
 import Logo from "../images/main_logo.png";
 import { SideBar } from "./SideBar";
 
+const useStyles = makeStyles((theme) => ({
+  mainMenuFlex: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    alignContent: "center",
+    fontFamily: "'MuseoModerno', cursive",
+  },
+  desktopMenu: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginLeft: "20px",
+    minWidth: "200px",
+    alignItems: "center",
+    alignContent: "center",
+    fontFamily: "'MuseoModerno', cursive",
+  },
+}));
+
 const Navbar = () => {
   const [state, setState] = useState({
     right: false,
   });
+  const classes = useStyles();
 
   const toggleSlider = (slider, open) => () => {
     setState({ ...state, [slider]: open });
@@ -29,6 +48,7 @@ const Navbar = () => {
   const sideList = (slider) => (
     <SideBar onClick={toggleSlider(slider, false)} />
   );
+
   const menuIconDiff = state.right;
   return (
     <>
@@ -42,7 +62,35 @@ const Navbar = () => {
                 <ClearAllIcon style={{ color: "yellow" }} />
               )}
             </IconButton>
-            <img src={Logo} alt="logo" style={{ width: 100, height: 55 }} />
+            <div className={classes.mainMenuFlex}>
+              <NavLink to="/">
+                <img
+                  src={Logo}
+                  alt="logo"
+                  style={{ width: 100, height: 55, marginTop: "10px" }}
+                />
+              </NavLink>
+              <div className={classes.desktopMenu}>
+                <NavLink
+                  to="/cv"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <Typography>CV</Typography>
+                </NavLink>
+                <NavLink
+                  to="/portfolio"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <Typography>Projects</Typography>
+                </NavLink>
+                <NavLink
+                  to="/contacts"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <Typography>Contact Me</Typography>
+                </NavLink>
+              </div>
+            </div>
             <MobileRightMenuSlider
               anchor="right"
               open={state.right}
