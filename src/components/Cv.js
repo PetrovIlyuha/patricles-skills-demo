@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
+import ParticlesBubbling from "./Particles";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -110,6 +111,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
   },
 }));
+
 const Cv = () => {
   const classes = useStyles();
   return (
@@ -139,7 +141,7 @@ const Cv = () => {
               align="center"
               style={{ color: "gray" }}
             >
-              Seld-Employed
+              Self-Employed
             </Typography>
             <Typography
               variant="subtitle1"
@@ -181,6 +183,7 @@ const Cv = () => {
           </Box>
         </Box>
       </Box>
+      <ParticlesBubbling />
     </>
   );
 };
