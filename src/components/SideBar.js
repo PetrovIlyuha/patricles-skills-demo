@@ -48,10 +48,12 @@ const menuIconsItems = [
   {
     listIcon: <Apps />,
     listText: "Portfolio",
+    route: "/portfolio",
   },
   {
     listIcon: <ContactMail />,
     listText: "Contacts",
+    route: "/contacts",
   },
 ];
 
