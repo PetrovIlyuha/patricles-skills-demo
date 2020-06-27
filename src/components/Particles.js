@@ -1,10 +1,21 @@
 import React from "react";
 import Particles from "react-particles-js";
+import { makeStyles } from "@material-ui/styles";
 
-export default function ParticlesBubbling({ className }) {
+const useStyles = makeStyles({
+  hiddenScrollBar: { overflow: "hidden" },
+  particlesCanvas: {
+    position: "absolute",
+    top: 77,
+    left: 0,
+  },
+});
+
+export default function ParticlesBubbling() {
+  const classes = useStyles();
   return (
     <Particles
-      canvasClassName={className}
+      canvasClassName={classes.particlesCanvas}
       params={{
         particles: {
           number: {
