@@ -8,38 +8,18 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import ClearAllIcon from "@material-ui/icons/ClearAll";
 import CloseIcon from "@material-ui/icons/Close";
 import Logo from "../images/main_logo.png";
 import { SideBar } from "./SideBar";
-
-const useStyles = makeStyles((theme) => ({
-  mainMenuFlex: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "center",
-    alignContent: "center",
-    fontFamily: "'MuseoModerno', cursive",
-  },
-  desktopMenu: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginLeft: "20px",
-    minWidth: "200px",
-    alignItems: "center",
-    alignContent: "center",
-    fontFamily: "'MuseoModerno', cursive",
-  },
-}));
+import { useStylesNavbar } from "./navbarStyles";
+import Footer from "./Footer";
 
 const Navbar = () => {
   const [state, setState] = useState({
     right: false,
   });
-  const classes = useStyles();
+  const classes = useStylesNavbar();
 
   const toggleSlider = (slider, open) => () => {
     setState({ ...state, [slider]: open });
@@ -53,7 +33,7 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static" style={{ background: "rgb(65, 5, 32)" }}>
+        <AppBar position="fixed" style={{ background: "rgb(65, 5, 32)" }}>
           <Toolbar>
             <IconButton onClick={toggleSlider("right", true)}>
               {menuIconDiff ? (
@@ -100,6 +80,8 @@ const Navbar = () => {
             </MobileRightMenuSlider>
           </Toolbar>
         </AppBar>
+
+        <Footer />
       </Box>
     </>
   );
