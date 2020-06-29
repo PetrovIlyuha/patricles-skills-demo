@@ -10,12 +10,13 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%)",
     backgroundBlendMode: "screen, overlay, hard-light, normal",
     height: "100vh",
+    marginTop: "77px",
   },
   timeLine: {
     position: "relative",
     padding: "1rem",
     margin: "0 auto",
-    heigth: "100vh",
+    heigth: "80vh",
     "&:before": {
       content: "''",
       position: "absolute",

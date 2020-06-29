@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "#FFFF7F",
     marginBottom: "2rem",
+    textTransform: "uppercase",
   },
   button: {
     marginTop: "1rem",
