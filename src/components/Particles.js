@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     position: "absolute",
     top: 77,
     left: 0,
+    height: "100vh",
   },
 });
 
