@@ -1,6 +1,6 @@
 import TeahouseDemo from "../images/teahouse_demo.gif";
-import Insta from "../images/insta_demo.gif";
 import NightWatcher from "../images/movies.gif";
+import Chatick from "../images/chat.gif";
 
 export const projectsList = [
   {
@@ -11,14 +11,14 @@ export const projectsList = [
     link: "https://zenteahouse.netlify.app/",
   },
   {
-    name: "Instagram Clone",
+    name: "Social Network App",
     description:
-      "Instagram Clone with React, Material UI, Cloudinary - Static Files CDN, GraphQL Apollo on the FrontEnd, Hasura Backend, GraphQL schema language for serving requests to Hasura DB",
-    image: Insta,
-    link: "https://instaclone-4557lfzzp.now.sh/",
+      "Tech-Stack: React. React-css-transitions, Firebase Backend, Material UI - design framework",
+    image: Chatick,
+    link: "https://chattily.netlify.app",
   },
   {
-    name: "NightWatcher (Movie Selection)",
+    name: "NightWatcher (Movie Search Engine)",
     description:
       "Movie Selection and Quick Assessment Guide powered by React, Styled-Components and MovieDB",
     image: NightWatcher,

@@ -42,11 +42,12 @@ const Header = () => {
       <Typography className={classes.subtitle} variant="h5">
         <Typed
           strings={[
-            "Web Enthusiast",
-            "Everything that can be written",
-            "Must be written in JavaScript",
-            "React is in my 💜, but...",
-            "Eagerly waiting for Vue 3 🔥",
+            "Love to learn new concepts",
+            "Dedicated to the projects",
+            "Clean code is a must",
+            "Front-end dev, but love databases",
+            "CSS is hard 😁",
+            "and particles are really cool 📸",
           ]}
           typeSpeed={40}
           startDelay={600}
