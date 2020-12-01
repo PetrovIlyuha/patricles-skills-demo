@@ -44,10 +44,10 @@ const Header = () => {
           strings={[
             "Love to learn new concepts",
             "Dedicated to the projects",
-            "Clean code is a must",
+            "Clean code as a principle",
             "Front-end dev, but love databases",
-            "CSS is hard 😁",
-            "and particles are really cool 📸",
+            "CSS is hard sometimes 😁",
+            "and these particles are really cool 📸",
           ]}
           typeSpeed={40}
           startDelay={600}

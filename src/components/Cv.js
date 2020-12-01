@@ -123,11 +123,12 @@ const Cv = () => {
           IT related Working Experience
         </Typography>
         <Box component="div" className={classes.timeLine}>
+          {/* First Entry */}
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2018
+            2017
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -149,10 +150,42 @@ const Cv = () => {
               align="center"
               style={{ color: "tan" }}
             >
-              Web development in PHP, Node (Backend) and React, Vue (Front-End)
+              Web development with HTML5, CSS3 and Designing Tools (Figma)
             </Typography>
           </Box>
-          {/* Second Job Entry */}
+          {/* Second Entry */}
+          <Typography
+            variant="h2"
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            2018
+          </Typography>
+          <Box component="div" className={classes.timeLineItem}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.subHeading}
+            >
+              Started to Learn Front-End Development
+            </Typography>
+            <Typography
+              variant="body1"
+              align="center"
+              style={{ color: "gray" }}
+            >
+              Building Core Skills (JavaScript, Networking, Templating)
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              align="center"
+              style={{ color: "tan" }}
+            >
+              Tech Stack under consideration: Vanilla JavaScript, Template
+              Engines: Pug, HandleBars, Basics Of Node and front-end framework
+              ReactJS
+            </Typography>
+          </Box>
+          {/* Third Entry */}
           <Typography
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
