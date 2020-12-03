@@ -128,7 +128,7 @@ const Cv = () => {
             variant="h2"
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2017
+            2016
           </Typography>
           <Box component="div" className={classes.timeLineItem}>
             <Typography
@@ -136,21 +136,21 @@ const Cv = () => {
               align="center"
               className={classes.subHeading}
             >
-              Freelance Developer @
+              Front-End Developer @
             </Typography>
             <Typography
               variant="body1"
               align="center"
               style={{ color: "gray" }}
             >
-              Self-Employed
+              "CyberLight" LLC, Russia, Integrated Monitoring Systems
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
               style={{ color: "tan" }}
             >
-              Web development with HTML5, CSS3 and Designing Tools (Figma)
+              Front-End development with HTML5, CSS3, Gulp, Webpack, Git.
             </Typography>
           </Box>
           {/* Second Entry */}
@@ -166,23 +166,23 @@ const Cv = () => {
               align="center"
               className={classes.subHeading}
             >
-              Started to Learn Front-End Development
+              Started to Learn Modern Front-End Stack
             </Typography>
             <Typography
               variant="body1"
               align="center"
               style={{ color: "gray" }}
             >
-              Building Core Skills (JavaScript, Networking, Templating)
+              Building Core Skills in React, Vue, State Management (Redux, MobX,
+              VueX, Redux-Saga)
             </Typography>
             <Typography
               variant="subtitle1"
               align="center"
               style={{ color: "tan" }}
             >
-              Tech Stack under consideration: Vanilla JavaScript, Template
-              Engines: Pug, HandleBars, Basics Of Node and front-end framework
-              ReactJS
+              Building portfolio and skill-set as well as working in
+              "CyberLight" as a Front-end engineer full-time
             </Typography>
           </Box>
           {/* Third Entry */}
@@ -212,7 +212,9 @@ const Cv = () => {
               align="center"
               style={{ color: "tan" }}
             >
-              Full IT Support for Mass Consumption Retail
+              Full IT Support for Mass Consumption Retail + lot's of spare time
+              to dedicate myself to deep learning of React, Vue and Angular as
+              well as NodeJS tooling and platform
             </Typography>
           </Box>
         </Box>
