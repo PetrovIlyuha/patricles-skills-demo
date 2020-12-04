@@ -10,7 +10,7 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <CssBaseline />
       <Route exact path="/" component={Home} />
       <Route path="/cv" component={Cv} />

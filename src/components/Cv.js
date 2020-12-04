@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
 import ParticlesBubbling from "./Particles";
+import { motion } from "framer-motion";
+import { fadeInWhileRotating } from "../animation-lib";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -10,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%)",
     backgroundBlendMode: "screen, overlay, hard-light, normal",
     height: "100vh",
-    marginTop: "77px",
+    marginTop: "70px",
   },
   timeLine: {
     position: "relative",
@@ -118,107 +120,113 @@ const Cv = () => {
   return (
     <>
       <Navbar />
-      <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center" className={classes.heading}>
-          IT related Working Experience
-        </Typography>
-        <Box component="div" className={classes.timeLine}>
-          {/* First Entry */}
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2016
+      <motion.div
+        variants={fadeInWhileRotating}
+        initial="hidden"
+        animate="show"
+      >
+        <Box component="header" className={classes.mainContainer}>
+          <Typography variant="h4" align="center" className={classes.heading}>
+            IT related Working Experience
           </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+          <Box component="div" className={classes.timeLine}>
+            {/* First Entry */}
             <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              Front-End Developer @
+              2016
             </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Front-End Developer @
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ color: "gray" }}
+              >
+                "CyberLight" LLC, Russia, Integrated Monitoring Systems
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                align="center"
+                style={{ color: "tan" }}
+              >
+                Front-End development with HTML5, CSS3, Gulp, Webpack, Git.
+              </Typography>
+            </Box>
+            {/* Second Entry */}
             <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "gray" }}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              "CyberLight" LLC, Russia, Integrated Monitoring Systems
+              2018
             </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Started to Learn Modern Front-End Stack
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ color: "gray" }}
+              >
+                Building Core Skills in React, Vue, State Management (Redux,
+                MobX, VueX, Redux-Saga)
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                align="center"
+                style={{ color: "tan" }}
+              >
+                Building portfolio and skill-set as well as working in
+                "CyberLight" as a Front-end engineer full-time
+              </Typography>
+            </Box>
+            {/* Third Entry */}
             <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "tan" }}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              Front-End development with HTML5, CSS3, Gulp, Webpack, Git.
+              2019
             </Typography>
-          </Box>
-          {/* Second Entry */}
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2018
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              Started to Learn Modern Front-End Stack
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "gray" }}
-            >
-              Building Core Skills in React, Vue, State Management (Redux, MobX,
-              VueX, Redux-Saga)
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "tan" }}
-            >
-              Building portfolio and skill-set as well as working in
-              "CyberLight" as a Front-end engineer full-time
-            </Typography>
-          </Box>
-          {/* Third Entry */}
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2019
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              Systems Administrator @
-            </Typography>
-            <Typography
-              variant="body1"
-              align="center"
-              style={{ color: "gray" }}
-            >
-              SIGNIA LLC
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              align="center"
-              style={{ color: "tan" }}
-            >
-              Full IT Support for Mass Consumption Retail + lot's of spare time
-              to dedicate myself to deep learning of React, Vue and Angular as
-              well as NodeJS tooling and platform
-            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Systems Administrator @
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                style={{ color: "gray" }}
+              >
+                SIGNIA LLC
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                align="center"
+                style={{ color: "tan" }}
+              >
+                Full IT Support for Mass Consumption Retail + lot's of spare
+                time to dedicate myself to deep learning of React, Vue and
+                Angular as well as NodeJS tooling and platform
+              </Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </motion.div>
       <ParticlesBubbling />
     </>
   );

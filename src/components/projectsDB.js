@@ -2,8 +2,16 @@ import TeahouseDemo from "../images/teahouse_demo.gif";
 import NightWatcher from "../images/movies.gif";
 import Chatick from "../images/chat.gif";
 import Freeily from "../images/player.gif";
+import Algolia from "../images/happycow.gif";
 
 export const projectsList = [
+  {
+    name: 'Effective Search "Happy Cow"',
+    description:
+      "Simple yet efficient project with search and pagination powered by Algolia engine",
+    image: Algolia,
+    link: "https://cow-shopper.netlify.app",
+  },
   {
     name: "Tea House",
     description:

@@ -2,8 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStylesProjects = makeStyles({
   mainContainer: {
-    height: "calc(100% - 154px)",
-    margin: "30px 0",
+    height: "calc(100% - 150px)",
+    margin: "30px 120px",
   },
   cardContainer: {
     maxWidth: 500,
