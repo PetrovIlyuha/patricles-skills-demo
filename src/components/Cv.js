@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%)",
     backgroundBlendMode: "screen, overlay, hard-light, normal",
-    height: "100vh",
+    height: "100%",
     marginTop: "70px",
+    marginBottom: '70px'
   },
   timeLine: {
     position: "relative",
@@ -148,7 +149,7 @@ const Cv = () => {
               <Typography
                 variant="body1"
                 align="center"
-                style={{ color: "gray" }}
+                style={{ color: "lightgreen" }}
               >
                 "CyberLight" LLC, Russia, Integrated Monitoring Systems
               </Typography>
@@ -178,7 +179,7 @@ const Cv = () => {
               <Typography
                 variant="body1"
                 align="center"
-                style={{ color: "gray" }}
+                style={{ color: "lightgreen" }}
               >
                 Building Core Skills in React, Vue, State Management (Redux,
                 MobX, VueX, Redux-Saga)
@@ -210,7 +211,7 @@ const Cv = () => {
               <Typography
                 variant="body1"
                 align="center"
-                style={{ color: "gray" }}
+                style={{ color: "lightgreen" }}
               >
                 SIGNIA LLC
               </Typography>

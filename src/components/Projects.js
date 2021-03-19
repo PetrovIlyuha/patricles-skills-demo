@@ -43,13 +43,13 @@ const Projects = () => {
         <Grid container justify="center" alignItems="center">
           {/* Project 1 */}
           {projectsList.map((project, key) => (
-            <Grid item xs={12} sm={8} md={6} lg={4} key={key}>
+            <Grid item xs={6} sm={6} md={6} lg={4} key={key}>
               <Card className={classes.cardContainer}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
                     alt={project.name}
-                    height="250"
+                    className={classes.cardMedia}
                     image={project.image}
                   />
                   <CardContent>

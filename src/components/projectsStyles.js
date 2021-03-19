@@ -1,13 +1,32 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export const useStylesProjects = makeStyles({
+export const useStylesProjects = makeStyles(theme => ({
   mainContainer: {
     height: "calc(100% - 150px)",
     margin: "30px 120px",
+    [theme.breakpoints.down('md')]: {
+      margin: "5rem 0",
+    }
   },
   cardContainer: {
     maxWidth: 500,
     margin: "5rem 2rem",
+    background: 'linear-gradient(45deg, black, #0D41E1)',
+    transition: 'all 0.3s ease-in',
+    "&:hover": {
+      transform: "translateY(-3px)",
+      boxShadow: "0px 0px 20px 10px rgba(116, 165, 203, 0.25)"
+    },
+    [theme.breakpoints.down('md')]: {
+      margin: "1.3rem 0.5rem",
+    }
+  },
+
+  cardMedia: {
+    height: "300px",
+    [theme.breakpoints.down('md')]: {
+      height: "150px"
+    }
   },
   title: {
     background:
@@ -21,6 +40,10 @@ export const useStylesProjects = makeStyles({
     borderTopLeftRadius: "10px",
     borderTopRightRadius: "10px",
     border: "2px solid #861657",
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1rem',
+      textAlign: 'center'
+    }
   },
   description: {
     background:
@@ -36,6 +59,11 @@ export const useStylesProjects = makeStyles({
     borderBottomLeftRadius: "10px",
     borderBottomRightRadius: "10px",
     border: "2px solid #DCEDC1",
+    [theme.breakpoints.down('md')]: {
+      fontSize: "0.8rem",
+      height: '150px',
+      texlAlign: 'center'
+    }
   },
   link: {
     textDecoration: "none",
@@ -51,4 +79,4 @@ export const useStylesProjects = makeStyles({
     justifyContent: "center",
     width: "100%",
   },
-});
+}));
