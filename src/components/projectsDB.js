@@ -3,8 +3,16 @@ import NightWatcher from "../images/movies.gif";
 import Chatick from "../images/chat.gif";
 import Freeily from "../images/player.gif";
 import Algolia from "../images/happycow.gif";
+import YouTube from "../images/youtube-clone.gif";
 
 export const projectsList = [
+  {
+    name: "YouTube Clone",
+    description:
+      "YouTube Clone. React & Styled-Components on the Front-End. Node, Express, Prisma ORM on the Backend",
+    image: YouTube,
+    link: "https://casttube.herokuapp.com/",
+  },
   {
     name: 'Effective Search "Happy Cow"',
     description:
