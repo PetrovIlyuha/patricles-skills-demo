@@ -81,7 +81,7 @@ const Projects = () => {
                   <CardContent>
                     <div className={classes.techIcons}>
                       {project.techIcons.map((icon, idx) => (
-                        <img src={icon} className={classes.techIconImage} />
+                        <img src={icon} className={classes.techIconImage} alt={`${project.name}'s technologies being used`} />
                       ))}
                     </div>
                     <Typography
