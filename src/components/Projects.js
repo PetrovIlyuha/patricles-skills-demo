@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import {
   Box,
@@ -16,6 +16,7 @@ import { useStylesProjects } from "./projectsStyles";
 import { projectsList } from "./projectsDB";
 import { motion } from "framer-motion";
 import { fadeInSlow } from "../animation-lib";
+import Modal from "./Modal";
 
 const CustomLink = withStyles({
   root: {
@@ -36,6 +37,12 @@ const CustomLink = withStyles({
 
 const Projects = () => {
   const classes = useStylesProjects();
+  const [showScreenshot, setShowScreenshot] = useState({
+    isActive: false,
+    element: null,
+  });
+  const { isActive, element } = showScreenshot;
+  console.log(isActive, element);
   return (
     <Box component="div" className={classes.mainContainer}>
       <Navbar />
@@ -51,6 +58,12 @@ const Projects = () => {
                     alt={project.name}
                     className={classes.cardMedia}
                     image={project.image}
+                    onClick={() =>
+                      setShowScreenshot({
+                        isActive: true,
+                        element: project.image,
+                      })
+                    }
                   />
                   <CardContent>
                     <Typography
@@ -70,14 +83,18 @@ const Projects = () => {
                     </Typography>
                   </CardContent>
                   <CardActions className={classes.linkFlexBox}>
-                    <CustomLink
-                      href={project.link}
-                      color="secondary"
-                      target="_blank"
-                      style={{ textDecoration: "none", textAlign: "center" }}
-                    >
-                      Live Demo
-                    </CustomLink>
+                    {project.link !== "" ? (
+                      <CustomLink
+                        href={project.link}
+                        color="secondary"
+                        target="_blank"
+                        style={{ textDecoration: "none", textAlign: "center" }}
+                      >
+                        Live Demo
+                      </CustomLink>
+                    ) : (
+                      <div style={{ padding: 25 }} />
+                    )}
                   </CardActions>
                 </CardActionArea>
               </Card>
@@ -85,6 +102,13 @@ const Projects = () => {
           ))}
         </Grid>
       </motion.div>
+      {isActive && (
+        <Modal
+          show={isActive}
+          setShow={setShowScreenshot}
+          innerContent={element}
+        />
+      )}
     </Box>
   );
 };

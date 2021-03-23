@@ -4,8 +4,16 @@ import Chatick from "../images/chat.gif";
 import Freeily from "../images/player.gif";
 import Algolia from "../images/happycow.gif";
 import YouTube from "../images/youtube-clone.gif";
+import GiftBox from "../images/giftbox-demo.gif";
 
 export const projectsList = [
+  {
+    name: "GiftBox IDE",
+    description:
+      "Code-gen and comments to produce docs in the json format to easily share it with others",
+    image: GiftBox,
+    link: ""
+  },
   {
     name: "YouTube Clone",
     description:
