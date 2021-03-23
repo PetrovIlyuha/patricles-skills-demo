@@ -88,7 +88,7 @@ const Modal = ({ show, setShow, innerContent }) => {
         <div className={classes.modalBody}>
           <img
             className={classes.modalImage}
-            src={innerContent}
+            src={innerContent.image}
             alt="modal content"
           />
         </div>

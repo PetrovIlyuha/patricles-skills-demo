@@ -10,6 +10,7 @@ import {
   CardMedia,
   Typography,
   Link,
+  Tooltip,
 } from "@material-ui/core";
 import Navbar from "./Navbar";
 import { useStylesProjects } from "./projectsStyles";
@@ -17,15 +18,21 @@ import { projectsList } from "./projectsDB";
 import { motion } from "framer-motion";
 import { fadeInSlow } from "../animation-lib";
 import Modal from "./Modal";
+import { AiOutlineGithub } from "react-icons/ai";
 
-const CustomLink = withStyles({
+const CustomLink = withStyles((theme) => ({
   root: {
     background: "#e9c46a",
     padding: "15px",
     borderRadius: "5px",
     fontWeight: "bold",
-    color: "white",
-    transition: "all 0.3s ease-in",
+    fontSize: "1.4rem",
+    color: "black",
+    transition: "all 0.14s ease-in",
+    [theme.breakpoints.down("sm")]: {
+      padding: "15px 10px",
+      fontSize: '0.8rem'
+    },
     "&:hover": {
       background: "#BD3658",
       transform: "translateY(-2px)",
@@ -33,7 +40,7 @@ const CustomLink = withStyles({
       color: "#FDF1CB",
     },
   },
-})(Link);
+}))(Link);
 
 const Projects = () => {
   const classes = useStylesProjects();
@@ -53,19 +60,30 @@ const Projects = () => {
             <Grid item xs={6} sm={6} md={6} lg={4} key={key}>
               <Card className={classes.cardContainer}>
                 <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    alt={project.name}
-                    className={classes.cardMedia}
-                    image={project.image}
-                    onClick={() =>
-                      setShowScreenshot({
-                        isActive: true,
-                        element: project.image,
-                      })
-                    }
-                  />
+                  <Tooltip
+                    className={classes.tooltip}
+                    placement="top-end"
+                    title="Click or Tap to enlarge an image"
+                  >
+                    <CardMedia
+                      component="img"
+                      alt={project.name}
+                      className={classes.cardMedia}
+                      image={project.image}
+                      onClick={() =>
+                        setShowScreenshot({
+                          isActive: true,
+                          element: project,
+                        })
+                      }
+                    />
+                  </Tooltip>
                   <CardContent>
+                    <div className={classes.techIcons}>
+                      {project.techIcons.map((icon, idx) => (
+                        <img src={icon} className={classes.techIconImage} />
+                      ))}
+                    </div>
                     <Typography
                       gutterBottom
                       variant="h5"
@@ -86,7 +104,6 @@ const Projects = () => {
                     {project.link !== "" ? (
                       <CustomLink
                         href={project.link}
-                        color="secondary"
                         target="_blank"
                         style={{ textDecoration: "none", textAlign: "center" }}
                       >
@@ -95,6 +112,13 @@ const Projects = () => {
                     ) : (
                       <div style={{ padding: 25 }} />
                     )}
+                    <CustomLink
+                      href={project.git}
+                      target="_blank"
+                      style={{ textDecoration: "none", textAlign: "center" }}
+                    >
+                      <AiOutlineGithub size={30} className={classes.gitlink} />
+                    </CustomLink>
                   </CardActions>
                 </CardActionArea>
               </Card>
