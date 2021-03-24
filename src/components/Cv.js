@@ -131,37 +131,6 @@ const Cv = () => {
             IT related Working Experience
           </Typography>
           <Box component="div" className={classes.timeLine}>
-            {/* First Entry */}
-            <Typography
-              variant="h2"
-              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-            >
-              2016
-            </Typography>
-            <Box component="div" className={classes.timeLineItem}>
-              <Typography
-                variant="h5"
-                align="center"
-                className={classes.subHeading}
-              >
-                Front-End Developer @
-              </Typography>
-              <Typography
-                variant="body1"
-                align="center"
-                style={{ color: "lightgreen" }}
-              >
-                "CyberLight" LLC, Russia, Integrated Monitoring Systems
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                align="center"
-                style={{ color: "tan" }}
-              >
-                Front-End development with HTML5, CSS3, Gulp, Webpack, Git.
-              </Typography>
-            </Box>
-            {/* Second Entry */}
             <Typography
               variant="h2"
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}

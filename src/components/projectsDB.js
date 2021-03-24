@@ -22,7 +22,7 @@ export const projectsList = [
     description:
       "Code-gen and comments to produce docs in the json format to easily share it with others",
     image: GiftBox,
-    link: "",
+    link: "cli",
     git: "https://github.com/PetrovIlyuha/Giftbox-ide",
     techIcons: [EsBuild, Typescript, React],
   },

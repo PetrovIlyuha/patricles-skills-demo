@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 import { fadeInSlow } from "../animation-lib";
 import Modal from "./Modal";
 import { AiOutlineGithub } from "react-icons/ai";
+import { GiMarsCuriosity } from "react-icons/gi";
 
 const CustomLink = withStyles((theme) => ({
   root: {
@@ -31,7 +32,7 @@ const CustomLink = withStyles((theme) => ({
     transition: "all 0.14s ease-in",
     [theme.breakpoints.down("sm")]: {
       padding: "15px 10px",
-      fontSize: '0.8rem'
+      fontSize: "0.8rem",
     },
     "&:hover": {
       background: "#BD3658",
@@ -81,7 +82,11 @@ const Projects = () => {
                   <CardContent>
                     <div className={classes.techIcons}>
                       {project.techIcons.map((icon, idx) => (
-                        <img src={icon} className={classes.techIconImage} alt={`${project.name}'s technologies being used`} />
+                        <img
+                          src={icon}
+                          className={classes.techIconImage}
+                          alt={`${project.name}'s technologies being used`}
+                        />
                       ))}
                     </div>
                     <Typography
@@ -101,7 +106,26 @@ const Projects = () => {
                     </Typography>
                   </CardContent>
                   <CardActions className={classes.linkFlexBox}>
-                    {project.link !== "" ? (
+                    {project.link === "cli" ? (
+                      <div
+                        style={{
+                          padding: 25,
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        <Typography
+                          variant="body1"
+                          style={{ color: "#e9c46a", fontWeight: "bold" }}
+                        >
+                          Cli tool. README is in the repo{" "}
+                          <GiMarsCuriosity
+                            size={30}
+                            style={{ marginLeft: "1rem", marginTop: '0.4rem' }}
+                          />
+                        </Typography>
+                      </div>
+                    ) : project.link.includes("https") ? (
                       <CustomLink
                         href={project.link}
                         target="_blank"
@@ -110,7 +134,14 @@ const Projects = () => {
                         Live Demo
                       </CustomLink>
                     ) : (
-                      <div style={{ padding: 25 }} />
+                      <div style={{ padding: 25 }}>
+                        <Typography
+                          variant="body2"
+                          style={{ color: "yellow", fontWeight: "bold" }}
+                        >
+                          Soon...
+                        </Typography>
+                      </div>
                     )}
                     <CustomLink
                       href={project.git}
